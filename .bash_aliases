@@ -1,6 +1,6 @@
 alias ll='ls -alF'
 alias la='ls -alh'
-alias zw='cd /mnt/d/Users/PC-TT/WorkSpace/'
+alias zw='cd ~/Documents/wspace'
 alias l='ls -CF'
 alias rm='rm -i'
 alias cdc='cd /mnt/c'
