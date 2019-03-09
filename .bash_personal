@@ -21,7 +21,7 @@ if [ $OS = "Darwin" ]; then
 	alias zw='cd ~/Documents/wspace'
 else
 # WIN
-	alias zw='cd ~/Documents/Wspace'
+	alias zw='cd ~/Documens/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
