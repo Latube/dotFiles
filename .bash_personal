@@ -11,6 +11,8 @@ alias l='ls'
 alias la='ls -Fsailh'
 
 alias z='cd'
+alias tr1='tree -L 1'
+alias tr2='tree -L 2'
 
 
 
