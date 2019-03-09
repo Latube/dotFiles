@@ -1,0 +1,27 @@
+#!/bin/bash
+
+OS=$(uname)
+
+alias cls='clear'
+alias cp='cp -i'
+alias rm='rm -i'
+alias mv='mv -i'
+
+alias l='ls'
+alias la='ls -Fsailh'
+
+alias z='cd'
+
+
+
+if [ $OS = "Darwin" ]; then
+# MACOS
+	alias zw='cd ~/Documents/wspace'
+else
+# WIN
+	alias zw='cd ~/Documents/Wspace'
+	alias cdc='cd /mnt/c'
+	alias cdd='cd /mnt/d'
+	alias cdg='cd /mnt/g'
+	
+fi
