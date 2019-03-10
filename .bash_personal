@@ -11,8 +11,8 @@ alias l='ls -l'
 alias la='ls -Fsailh'
 
 alias z='cd'
-alias tr1='tree -aL 1'
-alias tr2='tree -aL 2'
+alias t1='tree -aL 1'
+alias t2='tree -aL 2'
 alias vi='vim'
 
 
