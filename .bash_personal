@@ -7,8 +7,8 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias mv='mv -i'
 
-alias l='ls -l --color=auto'
-alias la='ls -Fsailh --color=auto'
+alias l='ls -l'
+alias la='ls -Fsailh'
 
 alias z='cd'
 alias tr1='tree -aL 1'
