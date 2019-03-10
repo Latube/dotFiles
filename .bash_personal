@@ -7,21 +7,22 @@ alias cp='cp -i'
 alias rm='rm -i'
 alias mv='mv -i'
 
-alias l='ls'
-alias la='ls -Fsailh'
+alias l='ls -l --color=auto'
+alias la='ls -Fsailh --color=auto'
 
 alias z='cd'
-alias tr1='tree -L 1'
-alias tr2='tree -L 2'
+alias tr1='tree -aL 1'
+alias tr2='tree -aL 2'
+alias vi='vim'
 
 
 
 if [ $OS = "Darwin" ]; then
 # MACOS
-	alias zw='cd ~/Documents/wspace'
+	alias zw='z ~/Documents/wspace'
 else
-# WIN
-	alias zw='cd ~/Documens/wspace'
+# WINLinux
+	alias zw='z /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
