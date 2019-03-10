@@ -13,6 +13,7 @@ alias la='ls -Fsailh'
 alias t1='tree -aL 1'
 alias t2='tree -aL 2'
 alias z='cd'
+alia md='mkdir'
 
 # other
 alias vi='vim'
