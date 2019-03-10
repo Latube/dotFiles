@@ -2,19 +2,21 @@
 
 OS=$(uname)
 
-alias cls='clear'
+# file
 alias cp='cp -i'
 alias rm='rm -i'
 alias mv='mv -i'
 
+# directory
 alias l='ls -l'
 alias la='ls -Fsailh'
-
-alias z='cd'
 alias t1='tree -aL 1'
 alias t2='tree -aL 2'
-alias vi='vim'
+alias z='cd'
 
+# other
+alias vi='vim'
+alias cls='clear'
 
 
 if [ $OS = "Darwin" ]; then
