@@ -19,6 +19,8 @@ alias md='mkdir'
 alias vi='vim'
 alias cls='clear'
 
+# functions
+
 
 if [ $OS = "Darwin" ]; then
 # MACOS
