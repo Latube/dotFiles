@@ -9,7 +9,7 @@ alias mv='mv -i'
 
 # directory
 alias l='ls -l'
-alias la='ls -Fsailh'
+alias la='ls -Fsailh --time-style=long-iso'
 alias t1='tree -aL 1'
 alias t2='tree -aL 2'
 alias z='cd'
