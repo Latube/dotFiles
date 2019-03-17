@@ -9,7 +9,6 @@ alias mv='mv -i'
 
 # directory
 alias l='ls -l'
-alias la='ls -Fsailh --time-style=long-iso'
 alias t1='tree -aL 1'
 alias t2='tree -aL 2'
 alias z='cd'
@@ -25,11 +24,13 @@ alias cls='clear'
 if [ $OS = "Darwin" ]; then
 # MACOS
 	alias zw='z ~/Documents/wspace'
+	alias la='ls -FsailhT'
 else
-# WINLinux
+# WSL
 	alias zw='z /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
+	alias la='ls -Fsailh --time-style=long-iso'
 	
 fi
