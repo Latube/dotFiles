@@ -1,4 +1,4 @@
-colorscheme default     " 设置颜色主题
+colorscheme torte     " 设置颜色主题
 
 syntax on               " 语法高亮
 
