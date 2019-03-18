@@ -25,6 +25,13 @@ alias t2='tree -aL 2'
 alias z='cd'
 alias md='mkdir'
 
+# git
+alias ga='git add'
+alias gc='git commit'
+alias gl='git pull'
+alias gp='git push'
+alias gst='git status'
+
 # other
 alias vi='vim'
 alias cls='clear'
@@ -35,13 +42,13 @@ alias cls='clear'
 if [ $OS = "Darwin" ]; then
 # MACOS
 	alias zw='z ~/Documents/wspace'
-	alias la='ls -FsailhT'
+	alias la='ls -FsAilhT'
 else
 # WSL
 	alias zw='z /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
-	alias la='ls -Fsailh --time-style=long-iso'
+	alias la='ls -FsAilh --time-style=long-iso'
 	
 fi
