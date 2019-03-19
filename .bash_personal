@@ -45,7 +45,8 @@ if [ $OS = "Darwin" ]; then
 	alias la='ls -FsAilhT'
 else
 # WSL
-	alias zw='z /mnt/d/Users/PC-TT/wspace'
+	export WSPACE='/mnt/d/Users/PC-TT/wspace'
+	alias zw='cd /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
