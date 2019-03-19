@@ -47,7 +47,7 @@ if [ $OS = "Darwin" ]; then
 else
 # WSL
 	export WSPACE='/mnt/d/Users/PC-TT/wspace'
-	alias zw='cd /mnt/d/Users/PC-TT/wspace'
+	alias zw='z /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
