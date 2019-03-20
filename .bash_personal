@@ -26,13 +26,6 @@ alias t2='tree -aL 2'
 alias z='cd'
 alias md='mkdir'
 
-# git
-alias ga='git add'
-alias gc='git commit'
-alias gl='git pull'
-alias gp='git push'
-alias gst='git status'
-
 # other
 alias vi='vim'
 alias cls='clear'
