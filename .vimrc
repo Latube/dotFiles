@@ -45,6 +45,7 @@ Plug 'tpope/vim-sensible'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/seoul256.vim'
+Plug 'wakatime/vim-wakatime'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
