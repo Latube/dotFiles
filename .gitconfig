@@ -18,9 +18,3 @@
 	doc = "!f() { git cap \"📖 DOC: $@\"; }; f"
 # TEST.
 	tst = "!f() { git cap \"✅ TEST: $@\"; }; f"
-
-	ga = "git add"
-	gc = "git commit"
-	gl = "git pull"
-	gp = "git push"
-	gst = "git status"
