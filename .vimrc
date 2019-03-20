@@ -32,6 +32,7 @@ set foldlevel=99        " 设置折叠层数
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
                         " 用空格键来开关折叠
 
+inoremap jj <esc>		" 将jj设为escape key
 " 自动跳转到上次退出的位置
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
