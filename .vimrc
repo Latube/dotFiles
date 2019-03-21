@@ -28,8 +28,19 @@ set backspace=2			" 解决插入模式下delete/backspce键失效问题
 set incsearch           " 输入搜索内容时就显示搜索结果
 set hlsearch            " 搜索时高亮显示被找到的文本
 
-set foldmethod=indent   " 设置缩进折叠
-set foldlevel=99        " 设置折叠层数
+"-- FOLDING --
+set foldmethod=syntax
+set foldlevelstart=1
+
+let javaScript_fold=1         " JavaScript
+let perl_fold=1               " Perl
+let php_folding=1             " PHP
+let r_syntax_folding=1        " R
+let ruby_fold=1               " Ruby
+let sh_fold_enabled=1         " sh
+let vimsyn_folding='af'       " Vim script
+let xml_syntax_folding=1      " XML
+
 nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
                         " 用空格键来开关折叠
 
