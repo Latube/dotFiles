@@ -1,4 +1,5 @@
-colorscheme torte     " 设置颜色主题
+set nocompatible		" vim
+colorscheme torte	    " 设置颜色主题
 
 syntax on               " 语法高亮
 
