@@ -32,7 +32,7 @@ alias cls='clear'
 
 #git
 alias ga="git add"
-alais gc="git commit"
+alias gc="git commit"
 alias gl="git pull"
 alias gp="git push"
 alias gst="git status"

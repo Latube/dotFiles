@@ -58,6 +58,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/seoul256.vim'
 Plug 'wakatime/vim-wakatime'
+Plug 'mattn/emmet-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
