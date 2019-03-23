@@ -20,6 +20,7 @@ alias mv='mv -i'
 
 # directory
 alias l='ls'
+alias l.='ls -d .*'
 alias ll='ls -l'
 alias t1='tree -aL 1'
 alias t2='tree -aL 2'
@@ -30,13 +31,16 @@ alias md='mkdir'
 alias vi='vim'
 alias cls='clear'
 
-#git
+# git
 alias ga="git add"
 alias gc="git commit"
 alias gl="git pull"
 alias gp="git push"
 alias gst="git status"
 
+# history
+export HISTCONTROL=ignoredups
+export HISTSIZE=1000
 # functions
 
 
