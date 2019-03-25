@@ -42,7 +42,9 @@ alias gst="git status"
 export HISTCONTROL=ignoredups
 export HISTSIZE=1000
 # functions
-
+mkcd(){
+	md -p "$1" && cd "$1"
+}
 
 if [ $OS = "Darwin" ]; then
 # MACOS
@@ -55,6 +57,7 @@ else
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
+	alias ps='ps auxf'
 	alias la='ls -FsAilh --time-style=long-iso'
 	
 fi
