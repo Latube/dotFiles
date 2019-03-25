@@ -30,6 +30,7 @@ alias md='mkdir'
 # other
 alias vi='vim'
 alias cls='clear'
+alias ni='npm install'
 
 # git
 alias ga="git add"
