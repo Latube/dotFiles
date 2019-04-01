@@ -26,10 +26,11 @@ alias t1='tree -aL 1'
 alias t2='tree -aL 2'
 alias z='cd'
 alias md='mkdir'
+alias ..='cd ../'
 
 # other
 alias vi='vim'
-alias cls='clear'
+alias c='clear'
 alias ni='npm install'
 
 # git
