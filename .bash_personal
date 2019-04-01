@@ -30,7 +30,7 @@ alias ..='cd ../'
 
 # other
 alias vi='vim'
-alias cls='clear'
+alias c='clear'
 alias ni='npm install'
 
 # git
