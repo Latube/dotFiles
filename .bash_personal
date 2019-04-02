@@ -11,7 +11,7 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
-OS=$(uname)
+OSINFO=$(uname -a)
 
 # file
 alias cp='cp -i'
@@ -48,11 +48,7 @@ mkcd(){
 	md -p "$1" && cd "$1"
 }
 
-if [ $OS = "Darwin" ]; then
-# MACOS
-	alias zw='z ~/Documents/wspace'
-	alias la='ls -FsAilhT'
-else
+if [[ $OSINFO == *"Microsoft"* ]]; then
 # WSL
 	export WSPACE='/mnt/d/Users/PC-TT/wspace'
 	alias zw='z /mnt/d/Users/PC-TT/wspace'
@@ -61,5 +57,16 @@ else
 	alias cdg='cd /mnt/g'
 	alias ps='ps auxf'
 	alias la='ls -FsAilh --time-style=long-iso'
-	
+
+elif [[ $OSINFO == *"el7"* ]]; then
+# CENTOS 7
+	alias zw='z ~/documents/wspace'
+
+elif [[ $OSINFO == *"MPB"* ]]; then 
+# MACOS
+	alias zw='z ~/Documents/wspace'
+	alias la='ls -FsAilhT'
+
+else
+	echo "unknown command"	
 fi
