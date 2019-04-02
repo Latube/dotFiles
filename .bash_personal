@@ -61,6 +61,7 @@ if [[ $OSINFO == *"Microsoft"* ]]; then
 elif [[ $OSINFO == *"el7"* ]]; then
 # CENTOS 7
 	alias zw='z ~/documents/wspace'
+	alias ps='ps auxf'
 
 elif [[ $OSINFO == *"MPB"* ]]; then 
 # MACOS
