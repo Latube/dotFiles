@@ -50,6 +50,10 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+"-- EMMET CONFIG --
+"redefine trigger key
+let g:user_emmet_leader_key=','
+
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
@@ -61,6 +65,6 @@ Plug 'wakatime/vim-wakatime'
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-
+Plug 'leafgarland/typescript-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
