@@ -17,9 +17,8 @@ alias rm='rm -i'
 alias mv='mv -i'
 
 # directory
-alias l='ls'
+alias l='ls -shl'
 alias l.='ls -d .*'
-alias ll='ls -l'
 alias t1='tree -aL 1'
 alias t2='tree -aL 2'
 alias z='cd'
