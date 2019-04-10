@@ -62,6 +62,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/seoul256.vim'
 Plug 'wakatime/vim-wakatime'
+Plug 'rizzatti/dash.vim'
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}

@@ -54,13 +54,13 @@ if [[ $OSINFO == *"Microsoft"* ]]; then
 	alias cdg='cd /mnt/g'
 	alias ps='ps auxf'
 	alias la='ls -FsAilh --time-style=long-iso'
-
-elif [[ $OSINFO == *"el7"* ]]; then
+fi
+if [[ $OSINFO == *"el7"* ]]; then
 # CENTOS 7
 	alias zw='z ~/documents/wspace'
 	alias ps='ps auxf'
-
-elif [[ $OSINFO == *"MPB"* ]]; then 
+fi
+if [[ $OSINFO == *"MPB"* ]]; then 
 # MACOS
 	alias zw='z ~/Documents/wspace'
 	alias la='ls -FsAilhT'
