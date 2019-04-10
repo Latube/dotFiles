@@ -37,6 +37,9 @@ alias gl="git pull"
 alias gp="git push"
 alias gst="git status"
 
+# tmux
+alias tls="tmux ls"
+
 # history
 export HISTCONTROL=ignoredups
 export HISTSIZE=1000
