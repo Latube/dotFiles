@@ -60,7 +60,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 	alias zw='z ~/documents/wspace'
 	alias ps='ps auxf'
 fi
-if [[ $OSINFO == *"MPB"* ]]; then 
+if [[ $OSINFO == *"MBP"* ]]; then 
 # MACOS
 	alias zw='z ~/Documents/wspace'
 	alias la='ls -FsAilhT'
