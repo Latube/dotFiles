@@ -43,10 +43,39 @@ alias tls="tmux ls"
 # history
 export HISTCONTROL=ignoredups
 export HISTSIZE=1000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # functions
 mkcd(){
 	md -p "$1" && cd "$1"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if [[ $OSINFO == *"Microsoft"* ]]; then
 # WSL
