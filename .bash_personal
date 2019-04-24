@@ -63,6 +63,10 @@ if [[ $OSINFO == *"el7"* ]]; then
 	alias zw='z ~/documents/wspace'
 	alias ps='ps auxf'
 fi
+if [[ $OSINFO == *"Ubuntu"* ]]; then
+	alias zw='z ~/Documents/wspace'
+	alias la='ls -FsAilh --time-style=long-iso'
+fi
 if [[ $OSINFO == *"MBP"* ]]; then 
 # MACOS
 	alias zw='z ~/Documents/wspace'
