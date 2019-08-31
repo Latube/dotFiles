@@ -100,6 +100,6 @@ if [[ $OSINFO == *"MBP"* ]]; then
 # MACOS
 	alias zw='z ~/Documents/wspace'
 	alias la='ls -FsAilhT'
-	export PATH=$PATH:/usr/local/mysql/bin
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+	export PATH="/usr/local/sbin:$PATH"
 fi
