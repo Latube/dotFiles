@@ -43,10 +43,39 @@ alias tls="tmux ls"
 # history
 export HISTCONTROL=ignoredups
 export HISTSIZE=1000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # functions
 mkcd(){
 	md -p "$1" && cd "$1"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 if [[ $OSINFO == *"Microsoft"* ]]; then
 # WSL
@@ -62,6 +91,10 @@ if [[ $OSINFO == *"el7"* ]]; then
 # CENTOS 7
 	alias zw='z ~/documents/wspace'
 	alias ps='ps auxf'
+fi
+if [[ $OSINFO == *"Ubuntu"* ]]; then
+	alias zw='z ~/Documents/wspace'
+	alias la='ls -FsAilh --time-style=long-iso'
 fi
 if [[ $OSINFO == *"MBP"* ]]; then 
 # MACOS
