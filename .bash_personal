@@ -91,6 +91,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 # CENTOS 7
 	alias zw='z ~/documents/wspace'
 	alias ps='ps auxf'
+	alias la='ls -FsAilh --time-style=long-iso'
 fi
 if [[ $OSINFO == *"Ubuntu"* ]]; then
 	alias zw='z ~/Documents/wspace'
