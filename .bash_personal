@@ -78,7 +78,7 @@ if [[ $OSINFO == *"Linux"* ]];then
 	alias la='ls -FsAilh --time-style=long-iso'
 	alias ps='ps auxf'
 	alias zw='z ~/Documents/wspace'
-	if [-z "$(whereis nvm)" ];then
+	if [ -z "$(whereis nvm)" ];then
 		wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
 		source ~/.bashrc
 	fi
