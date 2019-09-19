@@ -78,12 +78,6 @@ if [[ $OSINFO == *"Linux"* ]];then
 	alias la='ls -FsAilh --time-style=long-iso'
 	alias ps='ps auxf'
 	alias zw='z ~/Documents/wspace'
-	# install nvm
-	if [ -z "$(command -v nvm)" ];then
-		echo hello
-		wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-		source ~/.bashrc
-	fi
 	
 	# install vim plugin manager plug
 	if [ ! -e ~/.vim/autoload ]; then
