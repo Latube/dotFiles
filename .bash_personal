@@ -73,8 +73,8 @@ mkcd(){
 
 
 
-if [[ $OSINFO == *"Linux"* ]];then
 # Linux
+if [[ $OSINFO == *"Linux"* ]];then
 	export PS1="\[\e[36;40m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[37m\]\W\[\e[m\]\[\e[36m\]]\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
 	alias la='ls -FsAilh --time-style=long-iso'
 	alias ps='ps auxf'
@@ -86,24 +86,32 @@ if [[ $OSINFO == *"Linux"* ]];then
 	fi
 
 fi
-if [[ $OSINFO == *"Microsoft"* ]]; then
+
+
 # WSL
+if [[ $OSINFO == *"Microsoft"* ]]; then
 	export WSPACE='/mnt/d/Users/PC-TT/wspace'
 	alias zw='z /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
 fi
-if [[ $OSINFO == *"el7"* ]]; then
+
+
 # CENTOS 7
+if [[ $OSINFO == *"el7"* ]]; then
 	echo "CentOS 7"	
 fi
-if [[ $OSINFO == *"Ubuntu"* ]]; then
+
+
 # Ubuntu
+if [[ $OSINFO == *"Ubuntu"* ]]; then
 	echo "Ubuntu"
 fi
-if [[ $OSINFO == *"MBP"* ]]; then 
+
+
 # MACOS
+if [[ $OSINFO == *"MBP"* ]]; then 
 	alias zw='z ~/Documents/wspace'
 	alias la='ls -FsAilhT'
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
