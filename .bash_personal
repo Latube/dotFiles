@@ -73,11 +73,19 @@ mkcd(){
 
 
 
+if [[ $OSINFO == *"Linux"* ]];then
+# Linux
+	export PS1="\[\e[36;40m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[37m\]\W\[\e[m\]\[\e[36m\]]\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
+	alias la='ls -FsAilh --time-style=long-iso'
+	alias ps='ps auxf'
+	alias zw='z ~/Documents/wspace'
+	
+	# install vim plugin manager plug
+	if [ ! -e ~/.vim/autoload ]; then
+		curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	fi
 
-
-
-
-
+fi
 if [[ $OSINFO == *"Microsoft"* ]]; then
 # WSL
 	export WSPACE='/mnt/d/Users/PC-TT/wspace'
@@ -85,17 +93,14 @@ if [[ $OSINFO == *"Microsoft"* ]]; then
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
-	alias ps='ps auxf'
-	alias la='ls -FsAilh --time-style=long-iso'
 fi
 if [[ $OSINFO == *"el7"* ]]; then
 # CENTOS 7
-	alias zw='z ~/documents/wspace'
-	alias ps='ps auxf'
+	echo "CentOS 7"	
 fi
 if [[ $OSINFO == *"Ubuntu"* ]]; then
-	alias zw='z ~/Documents/wspace'
-	alias la='ls -FsAilh --time-style=long-iso'
+# Ubuntu
+	echo "Ubuntu"
 fi
 if [[ $OSINFO == *"MBP"* ]]; then 
 # MACOS

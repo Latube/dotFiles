@@ -65,7 +65,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'rizzatti/dash.vim'
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'leafgarland/typescript-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
