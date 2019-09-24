@@ -9,7 +9,9 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
+# set global enviorment value
 OSINFO=$(uname -a)
+WSPACE=~/Documents/wspace/
 
 # file
 alias cp='cp -i'
@@ -78,7 +80,7 @@ if [[ $OSINFO == *"Linux"* ]];then
 	export PS1="\[\e[36;40m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[37m\]\W\[\e[m\]\[\e[36m\]]\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
 	alias la='ls -FsAilh --time-style=long-iso'
 	alias ps='ps auxf'
-	alias zw='z ~/Documents/wspace'
+	alias zw='cd $WSPACE'
 	
 	# install vim plugin manager plug
 	if [ ! -e ~/.vim/autoload ]; then
@@ -112,7 +114,7 @@ fi
 
 # MACOS
 if [[ $OSINFO == *"MBP"* ]]; then 
-	alias zw='z ~/Documents/wspace'
+	alias zw='cd $WSPACE'
 	alias la='ls -FsAilhT'
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 	export PATH="/usr/local/sbin:$PATH"
