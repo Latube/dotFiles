@@ -5,7 +5,8 @@ syntax on               " 语法高亮
 
 filetype on             " 检测文件的类型
 
-set relativenumber      " 显示行号
+set number				" 显示行号
+set relativenumber      " 相对行号
 set cursorline          " 用浅色高亮当前行
 "autocmd InsertLeave * se nocul
 "autocmd InsertEnter * se cul
