@@ -104,7 +104,6 @@ fi
 if [[ $OSINFO == *"el7"* ]]; then
 	# install daily software
 	softList=(
-		git
 		wget
 		nginx
 	)
@@ -115,9 +114,11 @@ if [[ $OSINFO == *"el7"* ]]; then
 	done
 
 	# set work directory
-	mkdir -p ~/Documents/wspace/gitRepo
-	mkdir -p ~/Documents/wspace/web
-	mkdir -p ~/Documents/wspace/test
+	if [ ! -e ~/Documents/wspace ]; then
+		mkdir -p ~/Documents/wspace/gitRepo
+		mkdir -p ~/Documents/wspace/web
+		mkdir -p ~/Documents/wspace/test
+	fi
 
 	# set links
 	ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
