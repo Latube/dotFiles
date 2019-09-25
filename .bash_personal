@@ -102,10 +102,27 @@ fi
 
 # CENTOS 7
 if [[ $OSINFO == *"el7"* ]]; then
+	# install daily software
+	softList=(
+		git
+		wget
+		nginx
+	)
+	for i in "${softList[@]}";do
+		if [ -z $i ]; then
+			yum install -y $i
+		fi
+	done
+
+	# set work directory
+	mkdir -p ~/Documents/wspace/gitRepo
+	mkdir -p ~/Documents/wspace/web
+	mkdir -p ~/Documents/wspace/test
+	
+	
 	# set yum source
 	if [[ ! "$(grep 163 /etc/yum.repos.d/CentOS-Base.repo)" == *"163"* ]]; then
 		mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-		yum -y install wget
 		wget http://mirrors.163.com/.help/CentOS7-Base-163.repo -O /etc/yum.repos.d/CentOS-Base.repo && yum makecache
 	fi
 fi
