@@ -107,19 +107,11 @@ fi
 
 # CENTOS 7
 if [[ $OSINFO == *"el7"* ]]; then
+
 	# install daily software
-	softList=(
-		wget
-		nginx
-		python-devel
-		ntos-release-scl
-		devtoolset-3-toolchain 
-		tcc-c++
-	)
+	softList=( wget nginx python-devel ntos-release-scl devtoolset-3-toolchain tcc-c++ )
 	for i in "${softList[@]}";do
-		if [ -z $i ]; then
-			yum install -y $i
-		fi
+		echo $i
 	done
 
 	# install python3
