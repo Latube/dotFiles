@@ -111,7 +111,10 @@ if [[ $OSINFO == *"el7"* ]]; then
 	softList=(
 		wget
 		nginx
-	)
+		python-devel
+		ntos-release-scl
+		devtoolset-3-toolchain 
+		tcc-c++
 	for i in "${softList[@]}";do
 		if [ -z $i ]; then
 			yum install -y $i
@@ -128,6 +131,17 @@ if [[ $OSINFO == *"el7"* ]]; then
 		ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
 		ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
 	fi
+
+	# upgrade to the vim8
+	if [[ ]]; then
+		scl enable devtoolset-3 bash
+		yum install ncurses-devel
+		wget https://github.com/vim/vim/archive/master.zip -O /tmp/master.zip
+		unzip /tmp/master.zip
+		cd /tmp/vim-master/src
+		./configure --with-features=huge -enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config
+		make && make install
+		export PATH=/usr/local/bin:$PATH
 
 	# set work directory
 	if [ ! -e ~/Documents/wspace ]; then
