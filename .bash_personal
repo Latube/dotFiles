@@ -118,6 +118,11 @@ if [[ $OSINFO == *"el7"* ]]; then
 	mkdir -p ~/Documents/wspace/gitRepo
 	mkdir -p ~/Documents/wspace/web
 	mkdir -p ~/Documents/wspace/test
+
+	# set links
+	ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
+	ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
+	ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
 	
 	
 	# set yum source
