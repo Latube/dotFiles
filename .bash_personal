@@ -108,9 +108,18 @@ fi
 # CENTOS 7
 if [[ $OSINFO == *"el7"* ]]; then
 
+	echo "hello"
 	# install daily software
-	softList=( wget nginx python-devel ntos-release-scl devtoolset-3-toolchain tcc-c++ )
-	for i in "${softList[@]}";do
+	softList=(
+		wget
+		nginx 
+		python-devel 
+		ntos-release-scl 
+		devtoolset-3-toolchain 
+		tcc-c++ 
+	)
+	for i in "${softList[@]}"
+	do
 		echo $i
 	done
 
