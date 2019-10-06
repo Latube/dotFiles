@@ -108,31 +108,24 @@ fi
 # CENTOS 7
 if [[ $OSINFO == *"el7"* ]]; then
 
-	echo "hello"
 	# install daily software
-	softList=(
-		wget
-		nginx 
-		python-devel 
-		ntos-release-scl 
-		devtoolset-3-toolchain 
-		tcc-c++ 
-	)
-	for i in "${softList[@]}"
-	do
-		echo $i
-	done
+	#softList=(
+
+	#)
+	#for i in "${softList[@]}"
+	#	yum install -y $i
+	#done
 
 	# install python3
-	if [ ! -z "$which(python3)" ] ;then
-		yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
-		wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz -O /tmp/Python3.7.0
-		tar -xvf /tmp/Python3.7.0 && cd /tmp/Python3.7.0
-		./configure prefix=/usr/local/python3
-		make && make install
-		ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
-		ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
-	fi
+	#if [ ! -z "$which(python3)" ] ;then
+	#	yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
+	#	wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz -O /tmp/Python3.7.0
+	#	tar -xvf /tmp/Python3.7.0 && cd /tmp/Python3.7.0
+	#	./configure prefix=/usr/local/python3
+	#	make && make install
+	#	ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
+	#	ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
+	#fi
 
 	# upgrade to the vim8
 	#if [[ ]]; then
