@@ -87,6 +87,11 @@ if [[ $OSINFO == *"Linux"* ]];then
 		curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	fi
 
+	# generate git ssh-key
+	if [ ! -e ~/.ssh/ ];then
+		ssh-keygen -t rsa -b 4096 -C "ytopt@hotmail.com"
+	fi
+
 fi
 
 
@@ -102,7 +107,63 @@ fi
 
 # CENTOS 7
 if [[ $OSINFO == *"el7"* ]]; then
-	echo "CentOS 7"	
+
+	echo "hello"
+	# install daily software
+	softList=(
+		wget
+		nginx 
+		python-devel 
+		ntos-release-scl 
+		devtoolset-3-toolchain 
+		tcc-c++ 
+	)
+	for i in "${softList[@]}"
+	do
+		echo $i
+	done
+
+	# install python3
+	if [ ! -z "$which(python3)" ] ;then
+		yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
+		wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz -O /tmp/Python3.7.0
+		tar -xvf /tmp/Python3.7.0 && cd /tmp/Python3.7.0
+		./configure prefix=/usr/local/python3
+		make && make install
+		ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
+		ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
+	fi
+
+	# upgrade to the vim8
+	if [[ ]]; then
+		scl enable devtoolset-3 bash
+		yum install ncurses-devel
+		wget https://github.com/vim/vim/archive/master.zip -O /tmp/master.zip
+		unzip /tmp/master.zip
+		cd /tmp/vim-master/src
+		./configure --with-features=huge -enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config
+		make && make install
+		export PATH=/usr/local/bin:$PATH
+	fi
+
+	# set work directory
+	if [ ! -e ~/Documents/wspace ]; then
+		mkdir -p ~/Documents/wspace/gitRepo
+		mkdir -p ~/Documents/wspace/web
+		mkdir -p ~/Documents/wspace/test
+	fi
+
+	# set links
+	ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
+	ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
+	ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
+	
+	
+	# set yum source
+	if [[ ! "$(grep 163 /etc/yum.repos.d/CentOS-Base.repo)" == *"163"* ]]; then
+		mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+		wget http://mirrors.163.com/.help/CentOS7-Base-163.repo -O /etc/yum.repos.d/CentOS-Base.repo && yum makecache
+	fi
 fi
 
 
