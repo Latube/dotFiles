@@ -135,16 +135,16 @@ if [[ $OSINFO == *"el7"* ]]; then
 	fi
 
 	# upgrade to the vim8
-	if [[ ]]; then
-		scl enable devtoolset-3 bash
-		yum install ncurses-devel
-		wget https://github.com/vim/vim/archive/master.zip -O /tmp/master.zip
-		unzip /tmp/master.zip
-		cd /tmp/vim-master/src
-		./configure --with-features=huge -enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config
-		make && make install
-		export PATH=/usr/local/bin:$PATH
-	fi
+	#if [[ ]]; then
+	#	scl enable devtoolset-3 bash
+	#	yum install ncurses-devel
+	#	wget https://github.com/vim/vim/archive/master.zip -O /tmp/master.zip
+	#	unzip /tmp/master.zip
+	#	cd /tmp/vim-master/src
+	#	./configure --with-features=huge -enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config
+	#	make && make install
+	#	export PATH=/usr/local/bin:$PATH
+	#fi
 
 	# set work directory
 	if [ ! -e ~/Documents/wspace ]; then
