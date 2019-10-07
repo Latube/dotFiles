@@ -141,9 +141,10 @@ if [[ $OSINFO == *"el7"* ]]; then
 
 	# set work directory
 	if [ ! -e ~/Documents/wspace ]; then
-		mkdir -p ~/Documents/wspace/gitRepo
-		mkdir -p ~/Documents/wspace/web
-		mkdir -p ~/Documents/wspace/test
+		mkdir -p $WSPACE/gitRepo
+		mkdir -p $WSPACE/web
+		mkdir -p $WSPACE/test
+		mkdir -p $WSPACE/blog
 	fi
 
 	# set links
