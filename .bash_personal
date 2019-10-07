@@ -111,7 +111,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 	sudo yum install -y wget unzip
 
 	# install git
-	if [ -n "$(which git)" ]; then
+	if ! [ -x "$(command -v git)" ]; then
 		sudo yum install -y http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm
 		sudo yum install -y git
 	fi
@@ -129,7 +129,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 	#fi
 
 	# upgrade to the vim8
-	if [ -n "$(which vim)" ]; then
+	if ! [ -x "$(command -v vim)" ]; then
 		scl enable devtoolset-3 bash
 		yum install -y ncurses-devel
 		wget https://github.com/vim/vim/archive/master.zip -O /tmp/master.zip
