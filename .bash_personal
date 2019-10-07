@@ -108,7 +108,7 @@ fi
 if [[ $OSINFO == *"el7"* ]]; then
 
 	# install software from offical origine
-	yum install -y wget
+	yum install -y wget unzip
 
 	# install git
 	if [ -n "$(which git)" ]; then
