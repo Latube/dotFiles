@@ -23,7 +23,6 @@ alias l='ls -shl'
 alias l.='ls -d .*'
 alias t1='tree -aL 1'
 alias t2='tree -aL 2'
-alias z='cd'
 alias md='mkdir'
 alias ..='cd ../'
 alias ...='cd ../../'
@@ -80,7 +79,7 @@ if [[ $OSINFO == *"Linux"* ]];then
 	export PS1="\[\e[36;40m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[37m\]\W\[\e[m\]\[\e[36m\]]\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
 	alias la='ls -FsAilh --time-style=long-iso'
 	alias ps='ps auxf'
-	alias zw='cd $WSPACE'
+	alias cdw='cd $WSPACE'
 	
 	# install vim plugin manager plug
 	if [ ! -e ~/.vim/autoload ]; then
@@ -98,7 +97,7 @@ fi
 # WSL
 if [[ $OSINFO == *"Microsoft"* ]]; then
 	export WSPACE='/mnt/d/Users/PC-TT/wspace'
-	alias zw='z /mnt/d/Users/PC-TT/wspace'
+	alias cdw='z /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
@@ -108,12 +107,15 @@ fi
 # CENTOS 7
 if [[ $OSINFO == *"el7"* ]]; then
 
-	# install daily software
-	#softList=(
-	#)
-	#for i in "${softList[@]}"
-	#	yum install -y $i
-	#done
+	# install software from offical origine
+	softList=(
+		wget
+	)
+	for i in "${softList[@]}"
+		if [ -n "$(which $i)" ]; then
+			yum install -y $i
+		fi
+	done
 
 	# install git
 	if [ -n "$(which git)" ]; then
@@ -175,7 +177,7 @@ fi
 
 # MACOS
 if [[ $OSINFO == *"MBP"* ]]; then 
-	alias zw='cd $WSPACE'
+	alias cdw='cd $WSPACE'
 	alias la='ls -FsAilhT'
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 	export PATH="/usr/local/sbin:$PATH"
