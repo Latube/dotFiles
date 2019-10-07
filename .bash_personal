@@ -153,10 +153,10 @@ if [[ $OSINFO == *"el7"* ]]; then
 	
 	
 	# set yum source
-	if [[ ! "$(grep 163 /etc/yum.repos.d/CentOS-Base.repo)" == *"163"* ]]; then
-		mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
-		wget http://mirrors.163.com/.help/CentOS7-Base-163.repo -O /etc/yum.repos.d/CentOS-Base.repo && yum makecache
-	fi
+	#if [[ ! "$(grep 163 /etc/yum.repos.d/CentOS-Base.repo)" == *"163"* ]]; then
+	#	mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
+	#	wget http://mirrors.163.com/.help/CentOS7-Base-163.repo -O /etc/yum.repos.d/CentOS-Base.repo && yum makecache
+	#fi
 fi
 
 
