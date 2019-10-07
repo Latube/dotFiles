@@ -110,11 +110,15 @@ if [[ $OSINFO == *"el7"* ]]; then
 
 	# install daily software
 	#softList=(
-
 	#)
 	#for i in "${softList[@]}"
 	#	yum install -y $i
 	#done
+
+	# install git
+	yum install -y http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm
+	yum install git
+
 
 	# install python3
 	#if [ ! -z "$which(python3)" ] ;then
