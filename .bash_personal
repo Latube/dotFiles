@@ -87,7 +87,7 @@ if [[ $OSINFO == *"Linux"* ]];then
 	fi
 
 	# install nodejs version manager
-	if ! [ -x "$(command -v nvm)" ]; then
+	if ! [ -e ~/.nvm/nvm.sh ]; then
 		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
 		. ~/.bashrc
 	fi
