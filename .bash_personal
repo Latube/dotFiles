@@ -113,15 +113,15 @@ fi
 # CENTOS 7
 if [[ $OSINFO == *"el7"* ]]; then
 
+#################### install software ###################################
 	# install software from offical origine
-	sudo yum install -y wget unzip
+	sudo yum install -y wget unzip openssh-server
 
 	# install git
 	if ! [ -x "$(command -v git)" ]; then
 		sudo yum install -y http://opensource.wandisco.com/centos/7/git/x86_64/wandisco-git-release-7-2.noarch.rpm
 		sudo yum install -y git
 	fi
-
 
 	# install python3.7.0
 	if ! [  -x "$(command -v python3)" ] ;then
@@ -147,12 +147,21 @@ if [[ $OSINFO == *"el7"* ]]; then
 		export PATH=/usr/local/bin:$PATH
 	fi
 
+
+
+#################### set directory ###################################
+
 	# set work directory
 	if [ ! -e ~/Documents/wspace ]; then
 		mkdir -p $WSPACE/gitRepo
 		mkdir -p $WSPACE/web
 		mkdir -p $WSPACE/test
 		mkdir -p $WSPACE/blog
+	fi
+	
+	# remove the personal dotFiles folder to $WSPACE/gitRepo
+	if [ -e ~/dotFiles ]; then
+		mv ~/dotFiles $WSPACE/gitRepo/dotFiles
 	fi
 
 	# set links
@@ -168,6 +177,15 @@ if [[ $OSINFO == *"el7"* ]]; then
 	#fi
 fi
 
+
+
+
+
+
+
+
+#################### other ###################################
+ 
 
 # Ubuntu
 if [[ $OSINFO == *"Ubuntu"* ]]; then
