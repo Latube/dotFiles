@@ -115,7 +115,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 
 #################### install software ###################################
 	# install software from offical origine
-	sudo yum install -y wget unzip openssh-server
+	sudo yum install -y wget unzip openssh-server tree
 
 	# install git
 	if ! [ -x "$(command -v git)" ]; then
