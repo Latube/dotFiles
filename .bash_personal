@@ -77,7 +77,7 @@ mkcd(){
 # Linux
 if [[ $OSINFO == *"Linux"* ]];then
 	export PS1="\[\e[36;40m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[37m\]\W\[\e[m\]\[\e[36m\]]\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
-	alias la='ls -FsAilh --time-style=long-iso'
+	alias la='ls -FsAlh --time-style=long-iso'
 	alias ps='ps auxf'
 	alias cdw='cd $WSPACE'
 	
@@ -196,7 +196,7 @@ fi
 # MACOS
 if [[ $OSINFO == *"MBP"* ]]; then 
 	alias cdw='cd $WSPACE'
-	alias la='ls -FsAilhT'
+	alias la='ls -FsAlhT'
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 	export PATH="/usr/local/sbin:$PATH"
 fi
