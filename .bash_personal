@@ -103,7 +103,7 @@ fi
 # WSL
 if [[ $OSINFO == *"Microsoft"* ]]; then
 	export WSPACE='/mnt/d/Users/PC-TT/wspace'
-	alias cdw='z /mnt/d/Users/PC-TT/wspace'
+	alias cdw='cd /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
