@@ -27,11 +27,6 @@ alias md='mkdir'
 alias ..='cd ../'
 alias ...='cd ../../'
 
-# other
-alias vi='vim'
-alias c='clear'
-alias ni='npm install'
-
 # git
 alias ga="git add"
 alias gc="git commit"
@@ -44,6 +39,12 @@ alias tls="tmux ls"
 
 # history
 export HISTCONTROL=ignoredups
+
+# other
+alias vi='vim'
+alias c='clear'
+alias ni='npm install'
+alias vps='ssh sl@45.77.23.34 -p52'
 export HISTSIZE=1000
 
 
