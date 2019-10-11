@@ -117,7 +117,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 #################### install software ###################################
 	# install software from offical origine
 	#sudo yum install -y wget unzip openssh-server tree
-	softwareList="wget unzip openssh-server tree"
+	softwareList="wget unzip openssh-server tree axel"
 	for i in $softwareList
 	do
 		if ! [ "$(rpm -qa | grep $i)" ]; then
