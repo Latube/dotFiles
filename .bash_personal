@@ -98,6 +98,26 @@ if [[ $OSINFO == *"Linux"* ]];then
 		ssh-keygen -t rsa -b 4096 -C "ytopt@hotmail.com"
 	fi
 
+#################### set directory ###################################
+
+	# set work directory
+	if [ ! -e ~/Documents/wspace ]; then
+		mkdir -p $WSPACE/gitRepo
+		mkdir -p $WSPACE/web
+		mkdir -p $WSPACE/test
+		mkdir -p $WSPACE/blog
+	fi
+	
+	# remove the personal dotFiles folder to $WSPACE/gitRepo
+	if [ -e ~/dotFiles ]; then
+		mv ~/dotFiles $WSPACE/gitRepo/dotFiles
+	fi
+
+	# set links
+	ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
+	ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
+	ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
+
 fi
 
 
