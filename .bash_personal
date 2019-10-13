@@ -48,31 +48,10 @@ alias vps='ssh sl@45.77.23.34 -p52'
 export HISTSIZE=1000
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 # functions
 mkcd(){
 	md -p "$1" && cd "$1"
 }
-
-
-
-
-
-
-
-
 
 
 # Linux
