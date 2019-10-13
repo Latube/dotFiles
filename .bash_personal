@@ -52,6 +52,7 @@ alias tls="tmux ls"
 alias vi='vim'
 alias c='clear'
 alias ni='npm install'
+alias vps='ssh sl@10.211.55.6'
 
 
 #====================== FUNCTIONS ============================== 
