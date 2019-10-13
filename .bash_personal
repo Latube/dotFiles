@@ -70,7 +70,7 @@ mkcd(){
 if [[ $OSINFO == *"Linux"* ]];then
 	export PS1="\[\e[36;40m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[37m\]\W\[\e[m\]\[\e[36m\]]\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
 	alias la='ls -FsAlh --time-style=long-iso'
-	alias ps='ps auxf'
+	alias ps='ps -ef --forest'
 	alias cdw='cd $WSPACE'
 	
 	# install vim plugin manager plug
