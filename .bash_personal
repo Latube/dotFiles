@@ -62,6 +62,17 @@ mkcd(){
 }
 
 
+#====================== OTHERS ================================= 
+# set work directory
+dirs="gitRepo web test blog tmp"
+for dir in $dirs
+do
+	if [ ! -e ~/Documents/$dir ]; then
+		mkdir -p $WSPACE/$dir
+	fi
+done
+
+
 
 
 #====================== SCRIPT =================================
@@ -89,15 +100,6 @@ if [[ $OSINFO == *"Linux"* ]];then
 		ssh-keygen -t rsa -b 4096 -C "ytopt@hotmail.com"
 	fi
 
-
-	# set work directory
-	dirs="gitRepo web test blog tmp"
-	for dir in $dirs
-	do
-		if [ ! -e ~/Documents/$dir ]; then
-			mkdir -p $WSPACE/$dir
-		fi
-	done
 
 
 	# remove the personal dotFiles folder to $WSPACE/gitRepo
