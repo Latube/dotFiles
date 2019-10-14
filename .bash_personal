@@ -91,13 +91,15 @@ if [[ $OSINFO == *"Linux"* ]];then
 
 
 	# set work directory
-	if [ ! -e ~/Documents/wspace ]; then
-		mkdir -p $WSPACE/gitRepo
-		mkdir -p $WSPACE/web
-		mkdir -p $WSPACE/test
-		mkdir -p $WSPACE/blog
-	fi
-	
+	dirs="gitRepo web test blog tmp"
+	for dir in $dirs
+	do
+		if [ ! -e ~/Documents/$dir ]; then
+			mkdir -p $WSPACE/$dir
+		fi
+	done
+
+
 	# remove the personal dotFiles folder to $WSPACE/gitRepo
 	if [ -e ~/dotFiles ]; then
 		mv ~/dotFiles $WSPACE/gitRepo/dotFiles
