@@ -64,13 +64,23 @@ mkcd(){
 
 #====================== OTHERS ================================= 
 # set work directory
-dirs="gitRepo web test blog tmp"
+dirs="gitRepo web test blog tmp demo"
 for dir in $dirs
 do
 	if [ ! -e ~/Documents/$dir ]; then
 		mkdir -p $WSPACE/$dir
 	fi
 done
+
+# remove the personal dotFiles folder to $WSPACE/gitRepo
+if [ -e ~/dotFiles ]; then
+	mv ~/dotFiles $WSPACE/gitRepo/dotFiles
+fi
+
+# set links
+ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
+ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
+ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
 
 
 
@@ -102,15 +112,6 @@ if [[ $OSINFO == *"Linux"* ]];then
 
 
 
-	# remove the personal dotFiles folder to $WSPACE/gitRepo
-	if [ -e ~/dotFiles ]; then
-		mv ~/dotFiles $WSPACE/gitRepo/dotFiles
-	fi
-
-	# set links
-	ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
-	ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
-	ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
 
 fi
 
@@ -169,10 +170,6 @@ if [[ $OSINFO == *"el7"* ]]; then
 	fi
 
 	
-	# remove the personal dotFiles folder to $WSPACE/gitRepo
-	if [ -e ~/dotFiles ]; then
-		mv ~/dotFiles $WSPACE/gitRepo/dotFiles
-	fi
 
 	
 	# set yum source
