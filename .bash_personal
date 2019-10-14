@@ -71,7 +71,7 @@ if [[ $OSINFO == *"Linux"* ]];then
 	export PS1="\[\e[36;40m\][\[\e[m\]\[\e[36m\]\u\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[36m\]\h\[\e[m\] \[\e[37m\]\W\[\e[m\]\[\e[36m\]]\[\e[m\]\[\e[36m\]\\$\[\e[m\] "
 	alias la='ls -FsAlh --time-style=long-iso'
 	alias ps='ps -ef --forest'
-	alias cd='cd $WSPACE'
+	alias cw='cd $WSPACE'
 	
 	# install vim plugin manager plug
 	if [ ! -e ~/.vim/autoload ]; then
@@ -195,7 +195,7 @@ fi
 
 #---------------------- MACOS -----------------------------------
 if [[ $OSINFO == *"MBP"* ]]; then 
-	alias cd='cd $WSPACE'
+	alias cw='cd $WSPACE'
 	alias la='ls -FsAlhT'
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 	export PATH="/usr/local/sbin:$PATH"
