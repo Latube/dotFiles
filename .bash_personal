@@ -73,10 +73,6 @@ do
 	fi
 done
 
-if [ ! -e ~/.pip ]; then
-	mkdir -p ~/.pip
-	ln -sf $WSPACE/gitRepo/dotFiles/pip.conf ~/.pip/pip.conf
-fi
 
 # remove the personal dotFiles folder to $WSPACE/gitRepo
 if [ -e ~/dotFiles ]; then
@@ -89,6 +85,11 @@ ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
 ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
 
 
+# set pip source
+if [ ! -e ~/.pip ]; then
+	mkdir -p ~/.pip
+	ln -sf $WSPACE/gitRepo/dotFiles/pip.conf ~/.pip/pip.conf
+fi
 
 
 #====================== SCRIPT =================================
