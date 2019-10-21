@@ -83,6 +83,7 @@ fi
 ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
 ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
 ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
+ln -sf $WSPACE/gitRepo/dotFiles/.npmrc ~/.npmrc
 
 
 # set pip source
