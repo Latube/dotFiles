@@ -71,7 +71,7 @@ dirs="gitRepo web test blog tmp demo"
 for dir in $dirs
 do
 	if [ ! -e ~/Documents/$dir ]; then
-		mkdir -p $WSPACE/$dir
+		md -p $WSPACE/$dir
 	fi
 done
 
@@ -90,7 +90,7 @@ ln -sf $WSPACE/gitRepo/dotFiles/.npmrc ~/.npmrc
 
 # set pip source
 if [ ! -e ~/.pip ]; then
-	mkdir -p ~/.pip
+	md -p ~/.pip
 	ln -sf $WSPACE/gitRepo/dotFiles/pip.conf ~/.pip/pip.conf
 fi
 
