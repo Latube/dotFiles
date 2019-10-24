@@ -189,7 +189,6 @@ if [[ $OSINFO == *"el7"* ]]; then
 fi
 
 
-# Arch
 #---------------------- ARCH ------------------------------------
 if [[ $OSINFO == *"Arch"* ]]; then
 	echo "ArchLinux"
