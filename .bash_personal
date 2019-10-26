@@ -205,6 +205,10 @@ fi
 #---------------------- MACOS -----------------------------------
 if [[ $OSINFO == *"MBP"* ]]; then 
 	alias la='ls -FsAlhT'
+	# set pip origin
+	if [ ! -e ~/.pip/pip.conf ]; then
+		cp $WSPACE/gitRepo/dotFiles/pip.conf ~/.pip/pip.conf  
+	fi
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 	export PATH="/usr/local/sbin:$PATH"
 fi
