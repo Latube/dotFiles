@@ -65,7 +65,7 @@ mkcd(){
 
 #====================== OTHERS ================================= 
 # set work directory
-dirs="gitRepo web test blog tmp demo"
+dirs="gitRepo web test blog tmp demo projects"
 for dir in $dirs
 do
 	if [ ! -e ~/Documents/$dir ]; then
