@@ -62,6 +62,8 @@ mkcd(){
 	md -p "$1" && cd "$1"
 }
 
+# package manage
+# pm install uninstall update 
 
 #====================== OTHERS ================================= 
 # set work directory
@@ -69,7 +71,7 @@ dirs="gitRepo web test blog tmp demo projects"
 for dir in $dirs
 do
 	if [ ! -e ~/Documents/$dir ]; then
-		mkdir -p $WSPACE/$dir
+		md -p $WSPACE/$dir
 	fi
 done
 
@@ -88,7 +90,7 @@ ln -sf $WSPACE/gitRepo/dotFiles/.npmrc ~/.npmrc
 
 # set pip source
 if [ ! -e ~/.pip ]; then
-	mkdir -p ~/.pip
+	md -p ~/.pip
 	ln -sf $WSPACE/gitRepo/dotFiles/pip.conf ~/.pip/pip.conf
 fi
 
@@ -187,7 +189,6 @@ if [[ $OSINFO == *"el7"* ]]; then
 fi
 
 
-# Arch
 #---------------------- ARCH ------------------------------------
 if [[ $OSINFO == *"Arch"* ]]; then
 	echo "ArchLinux"
@@ -204,6 +205,10 @@ fi
 #---------------------- MACOS -----------------------------------
 if [[ $OSINFO == *"MBP"* ]]; then 
 	alias la='ls -FsAlhT'
+	# set pip origin
+	if [ ! -e ~/.pip/pip.conf ]; then
+		cp $WSPACE/gitRepo/dotFiles/pip.conf ~/.pip/pip.conf  
+	fi
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
 	export PATH="/usr/local/sbin:$PATH"
 fi
