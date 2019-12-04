@@ -210,5 +210,6 @@ if [[ $OSINFO == *"MBP"* ]]; then
 		cp $WSPACE/gitRepo/dotFiles/pip.conf ~/.pip/pip.conf  
 	fi
 	export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+	export BASH_SILENCE_DEPRECATION_WARNING=1
 	export PATH="/usr/local/sbin:$PATH"
 fi
