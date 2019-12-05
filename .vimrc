@@ -70,7 +70,7 @@ Plug 'rizzatti/dash.vim'
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'valloric/youcompleteme'
+Plug 'Valloric/youcompleteme',{'do':'python3 install.py'}
 
 " theme
 Plug 'rakr/vim-one'
