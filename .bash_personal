@@ -196,11 +196,127 @@ if [[ $OSINFO == *"Arch"* ]]; then
 fi
  
 
+
 #---------------------- UBUNTU ----------------------------------
 if [[ $OSINFO == *"Ubuntu"* ]]; then
 	echo "Ubuntu"
+	
 fi
 
+#---------------------- MANJARO ---------------------------------
+if [[ $OSINFO == *"MANJARO"* ]]; then
+	echo "This is Manjaro"
+	init(){
+		# source
+		sudo pacman-mirrors -c China -m rank
+		echo "
+		[archlinuxcn]
+		SigLevel = Optional TrustedOnly
+		Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/\$arch
+		" >> /etc/pacman.conf
+		sudo pacman -S archlinuxcn-keyring
+		sudo pacman -Syyu
+
+		# input method
+		sudo pacman -S fcitx-googlepinyin
+		sudo pacman -S fcitx-im # 选择全部安装
+		sudo pacman -S fcitx-configtool # 安装图形化配置工具
+		sudo pacman -S fcitx-skin-material
+
+		echo "
+		export GTK_MODULE=fcitx
+		export QT_IM_MODULE=fcitx
+		export XMODIFIERS=\"@im=fcitx
+		" > ~/.xprofile
+		
+		# yay
+		sudo pacman -S yay
+		yay --aururl "https://aur.tuna.tsinghua.edu.cn" --save
+
+
+		# install chinese fonts
+		sudo pacman -S wqy-zenhei
+		sudo pacman -S wqy-bitmapfont
+		sudo pacman -S wqy-microhei
+		sudo pacman -S ttf-wps-fonts
+		sudo pacman -S adobe-source-han-sans-cn-fonts
+		sudo pacman -S adobe-source-han-serif-cn-fonts
+
+
+
+		# install common software
+		# deepin 系的软件
+		sudo pacman -S deepin-picker # 深度取色器
+		sudo pacman -S deepin-screen-recorder # 录屏软件，可以录制 Gif 或者 MP4 格式
+		sudo pacman -S deepin-screenshot # 深度截图
+		sudo pacman -S deepin-system-monitor # 系统状态监控
+		yay -s deepin-wine-wechat
+		yay -S deepin-wine-tim
+		yay -S deepin-wine-baidupan
+		yay -S deepin.com.thunderspeed
+
+		# 开发软件
+		sudo pacman -S make
+		sudo pacman -S cmake
+		sudo pacman -S clang
+		sudo pacman -S vim
+		sudo pacman -S pycharm-professional # Python IDE
+		sudo pacman -S intellij-idea-ultimate-edition # JAVA IDE
+		sudo pacman -S goland # Go IDE
+		sudo pacman -S visual-studio-code-bin # vscode
+		sudo pacman -S qtcreator # 一款QT开发软件
+		sudo pacman -S postman-bin
+		sudo pacman -S insomnia # REST模拟工具
+		sudo pacman -S gitkraken # GIT管理工具
+		sudo pacman -S wireshark-qt # 抓包
+		sudo pacman -S zeal
+
+		# 办公软件
+		sudo pacman -S google-chrome
+		sudo pacman -S foxitreader # pdf 阅读
+		sudo pacman -S bookworm # 电子书阅读
+		sudo pacman -S unrar unzip p7zip
+		sudo pacman -S goldendict # 翻译、取词
+		sudo pacman -S wps-office
+		yay -S typora # markdown 编辑
+		yay -S electron-ssr # 缺少我需要的加密算法
+		yay -S xmind
+
+		# 设计
+		sudo pacman -S pencil # 免费开源界面原型图绘制工具
+
+		# 娱乐软件
+		sudo pacman -S netease-cloud-music
+
+		# 下载软件
+		sudo pacman -S aria2
+		sudo pacman -S filezilla  # FTP/SFTP
+
+		# 图形
+		sudo pacman -S gimp # 修图
+
+		# 系统工具
+		sudo pacman -S albert #类似Mac Spotlight，另外一款https://cerebroapp.com/
+		yay -S copyq #  剪贴板工具，类似 Windows 上的 Ditto
+
+		# 终端
+		sudo pacman -S screenfetch # 终端打印出你的系统信息，screenfetch -A 'Arch Linux'
+		sudo pacman -S htop
+		sudo pacman -S bat
+		sudo pacman -S yakuake # 堪称 KDE 下的终端神器，KDE 已经自带，F12 可以唤醒
+		sudo pacman -S net-tools # 这样可以使用 ifconfig 和 netstat
+		yay -S tldr
+		yay -S tig # 命令行下的 git 历史查看工具
+		yay -S tree
+		yay -S ncdu # 命令行下的磁盘分析器，支持Vim操作
+		yay -S mosh # 一款速度更快的 ssh 工具，网络不稳定时使用有奇效
+
+
+
+
+
+	}
+fi
 
 #---------------------- MACOS -----------------------------------
 if [[ $OSINFO == *"MBP"* ]]; then 
