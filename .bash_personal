@@ -303,7 +303,6 @@ if [[ $OSINFO == *"MANJARO"* ]]; then
 		sudo pacman -S screenfetch # 终端打印出你的系统信息，screenfetch -A 'Arch Linux'
 		sudo pacman -S htop
 		sudo pacman -S bat
-		sudo pacman -S yakuake # 堪称 KDE 下的终端神器，KDE 已经自带，F12 可以唤醒
 		sudo pacman -S net-tools # 这样可以使用 ifconfig 和 netstat
 		yay -S tldr
 		yay -S tig # 命令行下的 git 历史查看工具
