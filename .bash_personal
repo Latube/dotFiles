@@ -131,7 +131,7 @@ fi
 
 #---------------------- WSL ------------------------------------
 if [[ $OSINFO == *"Microsoft"* ]]; then
-	export WSPACE='/mnt/d/Users/PC-TT/wspace'
+#export WSPACE='/mnt/d/Users/PC-TT/wspace'
 	export PS1=$oldPS1
 	alias cw='cd /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
