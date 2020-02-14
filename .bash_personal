@@ -132,6 +132,7 @@ fi
 #---------------------- WSL ------------------------------------
 if [[ $OSINFO == *"Microsoft"* ]]; then
 #export WSPACE='/mnt/d/Users/PC-TT/wspace'
+	rm -rf $WSPACE/gitRepo\ web\ test\ blog\ tmp\ demo\ projects/
 	export PS1=$oldPS1
 	alias cw='cd /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
