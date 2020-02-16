@@ -196,7 +196,6 @@ if [[ $OSINFO == *"el7"* ]]; then
 		ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
 		ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
 	fi
->>>>>>> 1a40e9a4fbbc7b6f8d8e1cf50472a3be25e9b192
 
 	# upgrade vim version to the 8
 	if ! [ -x "$(command -v vim)" ]; then
