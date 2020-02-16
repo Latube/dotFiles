@@ -11,6 +11,7 @@ set relativenumber      " 相对行号
 set cursorline          " 用浅色高亮当前行
 "autocmd InsertLeave * se nocul
 "autocmd InsertEnter * se cul
+autocmd filetype yaml setlocal ai ts=2 sw=2 et
 
 
 set ruler               " 在编辑过程中，在右下角显示光标位置的状态行
@@ -69,7 +70,11 @@ Plug 'rizzatti/dash.vim'
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'valloric/youcompleteme'
+Plug 'Valloric/youcompleteme',{'do':'python3 install.py'}
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
 
 " theme
 Plug 'rakr/vim-one'
