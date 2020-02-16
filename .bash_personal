@@ -145,7 +145,6 @@ fi
 #---------------------- CENTOS 7 --------------------------------
 if [[ $OSINFO == *"el7"* ]]; then
 
-<<<<<<< HEAD
 	# install daily software
 	softList=(
 		wget
@@ -170,7 +169,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 	#	ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
 	#	ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
 	#fi
-=======
+
 	# install software from offical origine
 	softwareList="wget unzip openssh-server tree axel"
 	for i in $softwareList
