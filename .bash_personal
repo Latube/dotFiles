@@ -99,6 +99,9 @@ fi
 
 # Linux
 if [[ $OSINFO == *"Linux"* ]];then
+	# save old $PS1
+	oldPS1=$PS1
+
 	export PS1="\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] "
 	alias l='ls -shl --time-style=iso'
 	alias la='ls -FsAlh --time-style=iso'
@@ -128,16 +131,44 @@ fi
 
 #---------------------- WSL ------------------------------------
 if [[ $OSINFO == *"Microsoft"* ]]; then
-	export WSPACE='/mnt/d/Users/PC-TT/wspace'
-	alias cd='cd /mnt/d/Users/PC-TT/wspace'
+#export WSPACE='/mnt/d/Users/PC-TT/wspace'
+	rm -rf $WSPACE/gitRepo\ web\ test\ blog\ tmp\ demo\ projects/
+	export PS1=$oldPS1
+	alias cw='cd /mnt/d/Users/PC-TT/wspace'
 	alias cdc='cd /mnt/c'
 	alias cdd='cd /mnt/d'
 	alias cdg='cd /mnt/g'
+
 fi
 
 
 #---------------------- CENTOS 7 --------------------------------
 if [[ $OSINFO == *"el7"* ]]; then
+
+	# install daily software
+	softList=(
+		wget
+		nginx 
+		python-devel 
+		ntos-release-scl 
+		devtoolset-3-toolchain 
+		tcc-c++ 
+	)
+	for i in "${softList[@]}"
+	do
+		yum install -y $i
+	done
+
+	# install python3
+	#if [ ! -z "$which(python3)" ] ;then
+	#	yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
+	#	wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz -O /tmp/Python3.7.0
+	#	tar -xvf /tmp/Python3.7.0 && cd /tmp/Python3.7.0
+	#	./configure prefix=/usr/local/python3
+	#	make && make install
+	#	ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
+	#	ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
+	#fi
 
 	# install software from offical origine
 	softwareList="wget unzip openssh-server tree axel"
