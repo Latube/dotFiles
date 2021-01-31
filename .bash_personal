@@ -177,17 +177,6 @@ if [[ $OSINFO == *"el7"* ]]; then
 		sudo yum install -y git
 	fi
 
-	# install python3.7.0
-	if ! [  -x "$(command -v python3)" ] ;then
-		sudo yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
-		wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz -O /tmp/Python3.7.0
-		tar -xvf /tmp/Python3.7.0 && cd /tmp/Python3.7.0
-		./configure prefix=/usr/local/python3 --enable-optimizations
-		make && make install
-		ln -s /usr/local/python3/bin/python3.7 /usr/bin/python3
-		ln -s /usr/local/python3/bin/pip3.7 /usr/bin/pip3
-	fi
-
 	# upgrade vim version to the 8
 	if ! [ -x "$(command -v vim)" ]; then
 		scl enable devtoolset-3 bash
