@@ -98,7 +98,7 @@ fi
 #====================== SCRIPT =================================
 
 # Linux
-if [[ $OSINFO == *"Linux"* ]];then
+if [[ $OSINFO == *"Linux"* ]]; then
 	# save old $PS1
 	oldPS1=$PS1
 
@@ -145,20 +145,11 @@ fi
 #---------------------- CENTOS 7 --------------------------------
 if [[ $OSINFO == *"el7"* ]]; then
 
-	# install daily software
-	softList=(
-		wget
-		nginx 
-		python-devel 
-		ntos-release-scl 
-		devtoolset-3-toolchain 
-		tcc-c++ 
-	)
-	for i in "${softList[@]}"
-	do
-		yum install -y $i
-	done
+	# update software
+	sudo yum update
 
+	
+	
 	# install python3
 	#if [ ! -z "$which(python3)" ] ;then
 	#	yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make libffi-devel
