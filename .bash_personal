@@ -146,7 +146,7 @@ fi
 if [[ $OSINFO == *"el7"* ]]; then
 
 	# update software
-	sudo yum update
+	#sudo yum update
 
 	
 	
