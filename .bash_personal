@@ -71,7 +71,7 @@ dirs="gitRepo web test blog tmp demo projects"
 for dir in $dirs
 do
 	if [ ! -e ~/Documents/$dir ]; then
-		md -p $WSPACE/$dir
+		mkdir -p $WSPACE/$dir
 	fi
 done
 
