@@ -31,7 +31,7 @@ alias mv='mv -i'
 
 # directory
 alias l='ls -CF'
-alias l.='ls -d .*'
+alias l.='ls -dF .*'
 alias t1='tree -aL 1'
 alias t2='tree -aL 2'
 alias md='mkdir'
