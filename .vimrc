@@ -70,7 +70,6 @@ Plug 'rizzatti/dash.vim'
 Plug 'mattn/emmet-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'leafgarland/typescript-vim'
-Plug 'Valloric/youcompleteme',{'do':'python3 install.py'}
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
