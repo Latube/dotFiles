@@ -18,3 +18,8 @@
 	doc = "!f() { git cap \"📖 DOC: $@\"; }; f"
 # TEST.
 	tst = "!f() { git cap \"✅ TEST: $@\"; }; f"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
