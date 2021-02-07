@@ -160,6 +160,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 
 
 	# alias
+	alias yum='sudo yum'
 	alias update='yum update'
 	alias updatey='yum -y update'
 
