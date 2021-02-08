@@ -41,13 +41,6 @@ alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 
-# git
-alias ga="git add"
-alias gc="git commit"
-alias gl="git pull"
-alias gp="git push"
-alias gs="git status"
-
 # tmux
 alias tls="tmux ls"
 
@@ -181,7 +174,7 @@ if [[ $OSINFO == *"el7"* ]]; then
 	#fi
 
 	# install software from offical origine
-	softwareList="wget unzip openssh-server tree axel"
+	softwareList="wget unzip openssh-server tree axel autojump"
 	for i in $softwareList
 	do
 		if ! [ "$(rpm -qa | grep $i)" ]; then
