@@ -18,6 +18,7 @@ export WSPACE=~/Documents/wspace
 
 # HISTORY
 export HISTCONTROL=ignoredups
+export HISTTIMEFORMAT='%F %T '
 
 # OTHER
 export HISTSIZE=1000
