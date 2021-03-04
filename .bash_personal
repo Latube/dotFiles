@@ -56,7 +56,7 @@ alias ping='ping -c 5'
 alias fastping='ping -c100 -i.2'
 alias diff='colordiff'
 alias mount='mount |column -t'
-alias ports='netstat -tulanp'
+alias ports='sudo netstat -tulanp'
 
 
 alias header='curl -I'
