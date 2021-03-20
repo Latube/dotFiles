@@ -31,8 +31,9 @@ alias rm='rm -i'
 alias mv='mv -i'
 
 # directory
-alias l='ls -CF'
-alias l.='ls -dF .*'
+alias ls='ls -F --color=auto'
+alias l='ls -C'
+alias l.='ls -d .*'
 alias t1='tree -aALCF 1'
 alias t2='tree -aALCF 2'
 alias tree='tree -aACF'
@@ -74,25 +75,28 @@ mkcd(){
 
 #====================== OTHERS ================================= 
 # set work directory
-dirs="gitRepo web test blog tmp demo projects"
-for dir in $dirs
-do
-	if [ ! -e ~/Documents/$dir ]; then
-		mkdir -p $WSPACE/$dir
-	fi
-done
+
+# dirs="gitRepo web test blog tmp demo projects"
+# for dir in $dirs
+# do
+# 	if [ ! -e ~/Documents/$dir ]; then
+# 		mkdir -p $WSPACE/$dir
+# 	fi
+# done
 
 
 # remove the personal dotFiles folder to $WSPACE/gitRepo
+
 if [ -e ~/dotFiles ]; then
 	mv ~/dotFiles $WSPACE/gitRepo/dotFiles
 fi
 
 # set links
-ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
-ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
-ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
-ln -sf $WSPACE/gitRepo/dotFiles/.npmrc ~/.npmrc
+
+# ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
+# ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
+# ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
+# ln -sf $WSPACE/gitRepo/dotFiles/.npmrc ~/.npmrc
 
 
 # set pip source
@@ -110,8 +114,8 @@ if [[ $OSINFO == *"Linux"* ]]; then
 	oldPS1=$PS1
 
 	export PS1="\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] "
-	alias ll='ls -sFhl --time-style=iso'
-	alias la='ls -FsAlh --time-style=iso'
+	alias ll='ls -shl --time-style=iso'
+	alias la='ls -sAlh --time-style=iso'
 	alias ps='ps -ef --forest'
 	
 	# install vim plugin manager plug
@@ -175,14 +179,14 @@ if [[ $OSINFO == *"el7"* ]]; then
 	#fi
 
 	# install software from offical origine
-	softwareList="wget unzip openssh-server tree axel autojump"
-	for i in $softwareList
-	do
-		if ! [ "$(rpm -qa | grep $i)" ]; then
-			echo hello
-			sudo yum install -y $i
-		fi
-	done
+	# softwareList="wget unzip openssh-server tree axel autojump"
+	# for i in $softwareList
+	# do
+	# 	if ! [ "$(rpm -qa | grep $i)" ]; then
+	# 		echo hello
+	# 		sudo yum install -y $i
+	# 	fi
+	# done
 
 	# install git
 	if ! [ -x "$(command -v git)" ]; then
