@@ -348,6 +348,7 @@ fi
 
 #---------------------- MACOS -----------------------------------
 if [[ $OSINFO == *"MBP"* ]]; then 
+	unalias ls
 	alias la='ls -FsAlhT'
 	# set pip origin
 	if [ ! -e ~/.pip/pip.conf ]; then
