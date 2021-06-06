@@ -61,6 +61,7 @@ alias ports='sudo netstat -tulanp'
 
 
 alias header='curl -I'
+alias acme.sh='~/.acme.sh/acme.sh'
 
 
 
