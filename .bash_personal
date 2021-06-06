@@ -77,13 +77,13 @@ mkcd(){
 #====================== OTHERS ================================= 
 # set work directory
 
-# dirs="gitRepo web test blog tmp demo projects"
-# for dir in $dirs
-# do
-# 	if [ ! -e ~/Documents/$dir ]; then
-# 		mkdir -p $WSPACE/$dir
-# 	fi
-# done
+ dirs="gitRepo web test blog tmp demo projects"
+ for dir in $dirs
+ do
+ 	if [ ! -e ~/Documents/$dir ]; then
+ 		mkdir -p $WSPACE/$dir
+ 	fi
+ done
 
 
 # remove the personal dotFiles folder to $WSPACE/gitRepo
@@ -94,10 +94,10 @@ fi
 
 # set links
 
-# ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
-# ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
-# ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
-# ln -sf $WSPACE/gitRepo/dotFiles/.npmrc ~/.npmrc
+ ln -sf $WSPACE/gitRepo/dotFiles/.bash_personal ~/.bashPersonal
+ ln -sf $WSPACE/gitRepo/dotFiles/.gitconfig ~/.gitconfig
+ ln -sf $WSPACE/gitRepo/dotFiles/.vimrc ~/.vimrc
+ ln -sf $WSPACE/gitRepo/dotFiles/.npmrc ~/.npmrc
 
 
 # set pip source
